@@ -1,0 +1,773 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbdbdb;
+}
+.header__contenedor {
+    background-color: #6700ab;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.678);
+    position: sticky;
+    top: 0;
+    z-index: 70;
+    transition: background-color 0.9s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav__menu {
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.nav__menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.nav__menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+    margin-bottom: 40px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.nav__menu a:hover {
+    color: #b241fe;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color:transparent;
+    border: 2px solid white;
+    padding: 5px 10px;
+}
+.seccion__fondo {
+    background: url('img/banner-generico2.avif') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.356);
+}
+
+
+/*cerro blanco*/
+.seccion__fondo-cerro {
+    background: url('img/fondo2.jpg') no-repeat center center/cover; 
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.356);
+}
+.seccion__titulo {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.seccion__formulario input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.seccion__formulario button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b241fe;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.seccion__formulario button:hover {
+    background-color: #26023e;
+}
+.main__contenedor {
+    padding: 20px;
+    max-width: 1200px;  /* o el ancho que quieras */
+    min-width: 800px;
+    margin: auto;
+}
+
+.main__viajes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas en PC */
+    gap: 20px;
+    justify-items: center;  /* Centra las cards dentro de cada columna */
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.viaje {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 90%;        /* ocupa el 90% de la celda */
+    max-width: 400px;  /* no se estira más de 300px */
+}
+
+.viaje:hover {
+    transform: translateY(-10px);
+}
+.viaje_72 {
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 100%;       /* ocupa todo el ancho disponible */
+    max-width: 300px; /* igual que el contenedor */
+    margin: 20px auto; /* centrada con espacio arriba y abajo */
+    min-width: 90%;
+
+
+}
+
+.viaje_72:hover {
+    transform: translateY(-10px);
+}
+.viaje__img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-bottom: 2px solid #26023e;
+    border-top: 2px solid #26023e;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+    align-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.viaje__img-72 {
+    width: 100%;
+    max-height: 320px;
+    min-height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #26023e;
+    border-top: 2px solid #26023e;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+    align-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.viaje__contenido {
+    padding: 15px;
+}
+.viaje, 
+.viaje_72 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* reparte espacio */
+}
+
+.viaje__titulo {
+    font-size: 1.5em;
+    margin: 0 5px 10px 5px;
+}
+.viaje__descripcion {
+    font-size: 1em;
+    color: #444343;
+    margin: 0 9px 15px 9px;
+    min-height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.viaje__descripcion-72 {
+    font-size: 1.2em;
+    color: #444343;
+    margin: 0 20px 15px 20px;
+    min-height: 30px;
+    margin-bottom: 10px;
+    margin: 0 20px 15px 20px;
+}
+.viaje__boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4e0081;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 18px;
+    font-weight: bold;
+    border: 2px solid #26023e;
+    transition: 1s;
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 80px;
+    text-align: center;
+    align-self: center;
+
+}
+.viaje__boton:hover {
+    background-color: #8937c0;
+    border: 2px solid #edd2ff;
+    transition: 1s;
+}
+footer {
+    background-color: #26023e;
+    color: white;
+    padding: 30px 20px;
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    justify-content: space-between; /* agrega separación */
+    align-items: start;
+    gap: 100px; /* ajusta la separación entre izquierda y derecha */
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.footer__contenedor-nosotros {
+    text-align: left;
+}
+
+.footer__contenedor-contactos {
+    text-align: right;
+}
+
+.footer__contenedor h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    color: #b241fe;
+}
+
+.footer__contenedor a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__contenedor a:hover {
+    color: #b241fe;
+}
+
+.footer__contenedor-derechos {
+    grid-column: 1 / span 2;  /* que ocupe todo el ancho */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-style: italic;
+}
+.footer__contenedor a i:hover {
+    transform: rotate(20deg); /* gira el icono al pasar el mouse */
+}
+.footer__contenedor a i {
+    transition: transform 0.3s; /* para animar el icono */
+}
+
+
+
+
+
+/* Responsive Footer sin apilar */
+@media (max-width: 700px) {
+    .footer__contenedor {
+        grid-template-columns: 1fr 1fr; /* mantenemos 2 columnas */
+        gap: 10px;
+        padding: 15px;
+        text-align: center; /* centramos el texto */
+        max-width: 100%;
+        margin: auto;
+        justify-content: space-between; /* agrega separación */
+    }
+
+    .footer__contenedor h3 {
+        font-size: 1em; /* títulos más chicos */
+    }
+
+    .footer__contenedor a {
+        font-size: 0.9em; /* enlaces un poco más chicos */
+    }
+
+    .footer__contenedor-derechos {
+        font-size: 0.7em; /* texto del copy reducido */
+        padding-top: 5px;
+    }
+    .footer__contenedor a i:hover {
+    transform: none; /* gira el icono al pasar el mouse */
+}
+.footer__contenedor a i {
+    transition: none; /* para animar el icono */
+}
+}
+/* Header */
+.header__contenedor {
+    background-color: #6300a4;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.678);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.9s ease;
+    border-radius: 0 0 10px 10px;
+}
+.header__contenedor.scrolled {
+    background-color: rgba(0, 0, 0, 0.274); /* color con transparencia */
+    backdrop-filter: blur(6px); /* opcional: efecto de desenfoque */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.9s ease, box-shadow 0.9s ease;
+    border-radius: 0 0 10px 10px;   
+}
+.header__contenedor h1 {
+    margin: 0;
+    font-size: 2.5em;
+    box-shadow: none;
+    background-color: transparent;
+    transition: color 0.4s ease;
+    padding: 5px 10px;
+}
+
+.header__contenedor-h1.scrolled {
+    color: #000000;
+    transition: color 0.4s ease;
+    text-shadow: #44434365 1px 1px 2px;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* Botón hamburguesa */
+.nav__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menú principal */
+.nav__menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav__menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav__menu a:hover {
+    color: #c7bdc7;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid white;
+}
+/* Cuando el header baja con scroll */
+.header__contenedor-h1.scrolled {
+    color: #121212;
+    transition: color 0.4s ease;
+    text-shadow: #44434365 1px 1px 2px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.header__contenedor.scrolled .nav__menu a {
+    color: #f0f0f0; /* letras negras */
+    border-color: #d8d8d8;
+    transition: color 0.4s ease, border-color 0.4s ease;
+    background-color: #8937c018 ;
+    border-radius: 10px;
+    border: 2px solid #b241fe;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.header__contenedor.scrolled .nav__menu a:hover {
+    color: #ffffff; /* sigue con tu efecto hover */
+    border: 2px solid #cfcfcf; /* borde negro */
+}
+
+/* También cambiamos el botón hamburguesa si lo usas en móvil */
+.header__contenedor.scrolled .nav__toggle {
+    color: black;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -300px; /* fuera de pantalla */
+        height: 100%;
+        width: 250px;
+        background: linear-gradient(180deg, #26023e, #4e0081);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 20px;
+        gap: 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+        transition: right 0.3s ease-in-out;
+        z-index: 200;
+    }
+
+    .nav__menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav__menu ul li {
+        width: 100%;
+    }
+
+    .nav__menu a {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: none;
+        font-size: 1.1em;
+        text-align: left;
+        transition: background 0.3s, padding-left 0.3s;
+    }
+
+    .nav__menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding-left: 25px; /* pequeño desplazamiento al hover */
+    }
+
+    /* Mostrar menú cuando está activo */
+    .nav__menu.active {
+        right: 0; /* entra desde la derecha */
+    }
+
+    /* Botón hamburguesa arriba a la derecha */
+    .nav__toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8em;
+        color: white;
+        cursor: pointer;
+        z-index: 300;
+    }
+    .seccion__formulario input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+}
+.nav__close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav__close {
+        display: block;
+    }
+}
+
+/* --- Estilos para cuando el header hace scroll --- */
+.header__contenedor {
+    background-color: #6300a4;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.678);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.9s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.header__contenedor.scrolled {
+    background-color: rgba(0, 0, 0, 0.274); /* color con transparencia */
+    backdrop-filter: blur(6px); /* opcional: efecto de desenfoque */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.9s ease, box-shadow 0.9s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Estilos para el header cuando se hace scroll en pantallas grandes */
+@media (min-width: 769px) {
+    .header__contenedor.scrolled {
+        background-color: rgba(0, 0, 0, 0.274); /* transparencia solo en pantallas grandes */
+    }
+}
+
+/* En móviles, no queremos fondo transparente */
+@media (max-width: 768px) {
+    .header__contenedor.scrolled {
+        background-color: #6300a4; /* fondo opaco en móvil */
+        backdrop-filter: none; /* eliminamos el desenfoque */
+        border: none;
+        
+    }
+}
+
+.header__contenedor h1 {
+    margin: 0;
+    font-size: 2.5em;
+    box-shadow: none;
+    background-color: transparent;
+    transition: color 0.4s ease;
+    padding: 5px 10px;
+}
+
+.header__contenedor-h1.scrolled {
+    color: #000000;
+    transition: color 0.4s ease;
+    text-shadow: #44434365 1px 1px 2px;
+}
+
+.header__contenedor.scrolled .nav__menu a {
+    color: #f0f0f0; /* letras negras */
+    border-color: #d8d8d8;
+    transition: color 0.4s ease, border-color 0.4s ease;
+    background-color: #8937c018;
+    border-radius: 10px;
+    border: 2px solid #b241fe;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.header__contenedor.scrolled .nav__menu a:hover {
+    color: #ffffff; /* sigue con tu efecto hover */
+    border: 2px solid #cfcfcf; /* borde negro */
+}
+
+/* También cambiamos el botón hamburguesa si lo usas en móvil */
+.header__contenedor.scrolled .nav__toggle {
+    color: black;
+}
+
+
+
+/* Fondo del modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* Fondo oscuro con transparencia */
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.4s ease;
+
+}
+
+/* Cuando se muestra */
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+/* Contenedor */
+.modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    border-radius: 20px;
+    padding: 2px 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal--show .modal__container {
+    transform: scale(1);
+}
+
+/* Imagen */
+.modal__img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.modal__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4e0081;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Texto */
+.modal__paragraph {
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Botón cerrar */
+.modal__close {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #f26250, #ff7a66);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(242, 98, 80, 0.4);
+}
+
+.modal__close:hover {
+    background: linear-gradient(135deg, #ff7a66, #f26250);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(242, 98, 80, 0.6);
+}
+@media (max-width: 700px) {
+
+    .header__contenedor.scrolled .nav__menu a {
+    color: none; /* letras negras */
+    border-color: none;
+    transition: none;
+    background-color: none ;
+    border-radius:noen;
+    border: none;
+    padding:none;
+    font-weight: none;
+}
+
+
+    .main__contenedor {
+        padding: 0 20px;
+        max-width: 600px;  /* o el ancho que quieras */
+        min-width: 300px;
+        margin: auto;
+}
+    @media (max-width: 700px) {
+    .main__viajes {
+        grid-template-columns: 1fr; /* en móvil solo 1 columna */
+    }
+}
+
+
+    .viaje .viaje_72 {
+        padding: 0 px;
+        border-radius: 8px;
+    }
+    .viaje:hover .viaje_72:hover {
+        transform: none; /* sin efecto hover en móvil */
+    }
+    .viaje_72{
+        padding: 0 px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+
+    .viaje__img {
+        height: 100px; /* más baja para que no se alargue */
+    }
+
+    .viaje__titulo {
+        font-size: 0; /* más chico */
+    }
+
+    .viaje__descripcion {
+        font-size: 0.8em;
+    }
+
+    .viaje__boton {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+
+ .header__contenedor.scrolled {
+    background-color: none; /* color con transparencia */
+    backdrop-filter:none; /* opcional: efecto de desenfoque */
+    box-shadow: none;
+    transition: none;
+    border-radius: none;
+}
+
+    .header__contenedor-h1.scrolled {
+    color: none;
+    transition: none;
+    text-shadow: none;
+}
+
+.header__contenedor.scrolled .nav__menu a {
+    color: none; /* letras negras */
+    border-color: none;
+    transition: none;
+    background-color:none;
+    border-radius: none;
+    border: none;
+    padding: none;
+    font-weight: none;
+}
+
+.header__contenedor.scrolled .nav__menu a:hover {
+    color:none; /* sigue con tu efecto hover */
+    border: none; /* borde negro */
+}
+
+/* También cambiamos el botón hamburguesa si lo usas en móvil */
+.header__contenedor.scrolled .nav__toggle {
+    color: none;
+}
+
+}
