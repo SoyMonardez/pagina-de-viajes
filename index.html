@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génesis viajes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="incono-genesis.png" type="image/png">
+
+</head>
+
+<body>
+<header class="header__contenedor">
+    <div class="header__logo">
+        <h1>Génesis viajes</h1>
+        <button class="nav__toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <nav class="nav__menu" id="nav-menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#viajes">Viajes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="seccion__fondo">
+        <h2 class="seccion__titulo">Explora Nuestros Destinos</h2>
+        <form action="/buscar" method="GET" class="seccion__formulario">
+            <input type="text" name="q" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+    <main class="main__contenedor" id="viajes">
+        <section class="main__viajes">
+            <article class="viaje">
+                <img src="img/fondo.jpg" alt="imagen de cerro blanco de san juan" class="viaje__img">
+                <h3 class="viaje__titulo">Cerro Blanco, Zonda, San Juan</h3>
+                <p class="viaje__descripcion">Sumérgete en la belleza natural de Cerro Blanco, en el corazón de Zonda, San Juan. Con impresionantes paisajes montañosos, rutas de trekking y vistas panorámicas, es el destino ideal para los amantes de la naturaleza y la aventura.</p>
+                <a href="pagina-de-viajes/cerro-blanco.html"class="viaje__boton">Ver destino</a>
+            </article>
+            <article class="viaje">
+                <img src="img/fondo4.jpg" alt="imagen de talacasto de san juan" class="viaje__img">
+                <h3 class="viaje__titulo">Talacasto, San Juan</h3>
+                <p class="viaje__descripcion">Descubre la belleza de Talacasto, un rincón encantador de San Juan. Con su rica historia y paisajes impresionantes, es el lugar perfecto para una escapada.</p>
+                <a href="pagina-de-viajes/talacasto.html" class="viaje__boton">Ver destino</a>
+            </article>
+            <article class="viaje">
+                <img src="img/lalaja1.jpeg" alt="imagen de la laja de san juan" class="viaje__img">
+                <h3 class="viaje__titulo">La Laja, San Juan</h3>
+                <p class="viaje__descripcion">Explora La Laja, un destino lleno de encanto natural y cultural en San Juan. Perfecto para quienes buscan tranquilidad y belleza escénica.</p>
+                <a href="pagina-de-viajes/la-laja.html"class="viaje__boton">Ver destino</a>
+            </article>
+            <article class="viaje">
+                <img src="img/primapie.jpg" alt="imagen de la laja de san juan" class="viaje__img">
+                <h3 class="viaje__titulo">Pie de palo, san juan</h3>
+                <p class="viaje__descripcion">Indaga en Pie de Palo, un lugar fascinante en San Juan conocido por sus formaciones rocosas únicas y su importancia geológica.</p>
+                <a href="pagina-de-viajes/pie-de-palo.html"class="viaje__boton">Ver destino</a>
+            </article>
+        </section>
+    </main>
+
+
+
+    
+<footer class="footer__contenedor" id="contacto">
+    <div class="footer__contenedor-contactos">
+        <h3>Síguenos en:</h3>
+        <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-envelope"></i></a>
+    </div>
+    
+    <div class="footer__contenedor-nosotros">
+        <h3>Sobre nosotros</h3>
+        <ul>
+            <li><a href="">Sobre Génesis</a></li>
+            <li><a href="">Política de privacidad </a></li>
+            <li><a href="">Términos y condiciones</a></li>
+            <li><a href="">Afiliados</a></li>
+        </ul>
+    </div>
+    
+    <div class="footer__contenedor-derechos">
+        <p>&copy; 2025 Viajes Deja Vu. Todos los derechos reservados hacia Alejo Monardez.</p>
+    </div>
+</footer>
+<script>
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    });
+</script>
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header__contenedor",".header__contenedor-cerro",".header__contenedor-h1");
+        if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+<script src="js/modal.js"></script>
+</body>
+</html>
